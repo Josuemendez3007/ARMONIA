@@ -1,0 +1,126 @@
+{
+  "selected": "random_forest",
+  "validation_f1_macro": {
+    "baseline": 0.1,
+    "svm": 0.3333333333333333,
+    "random_forest": 0.6666666666666666
+  },
+  "test": {
+    "pop": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 1.0
+    },
+    "regueton": {
+      "precision": 0.5,
+      "recall": 1.0,
+      "f1-score": 0.6666666666666666,
+      "support": 1.0
+    },
+    "rock": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1-score": 0.0,
+      "support": 0.0
+    },
+    "rap": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1-score": 0.0,
+      "support": 1.0
+    },
+    "accuracy": 0.6666666666666666,
+    "macro avg": {
+      "precision": 0.375,
+      "recall": 0.5,
+      "f1-score": 0.41666666666666663,
+      "support": 3.0
+    },
+    "weighted avg": {
+      "precision": 0.5,
+      "recall": 0.6666666666666666,
+      "f1-score": 0.5555555555555555,
+      "support": 3.0
+    }
+  },
+  "confusion_matrix": [
+    [
+      1,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      1,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      1,
+      0,
+      0
+    ]
+  ],
+  "matrix_labels": [
+    "pop",
+    "regueton",
+    "rock",
+    "rap"
+  ],
+  "matrix_axes": "filas reales, columnas predichas",
+  "counts": {
+    "train": {
+      "pop": 14,
+      "regueton": 15,
+      "rock": 16,
+      "rap": 13
+    },
+    "validation": {
+      "pop": 1,
+      "regueton": 1,
+      "rock": 1,
+      "rap": 1
+    },
+    "test": {
+      "pop": 1,
+      "regueton": 1,
+      "rap": 1
+    }
+  },
+  "calibrated": false,
+  "automatic_acceptance": false,
+  "limitations": [
+    "Puntuaciones no calibradas: siempre requiere revisión humana.",
+    "El test evalúa solo el modelo seleccionado, sin reentrenar con validación.",
+    "El hash detecta duplicados binarios, no versiones recodificadas. Agrupar manualmente obras/versiones.",
+    "Reutilizar el test para cambiar decisiones deja de ser una evaluación independiente.",
+    "Prueba incompleta; no evalúa estos géneros: rock",
+    "40 fragmentos de 5 mezclas, no 40 canciones independientes; 10 fragmentos por genero.",
+    "Etiquetas heredadas de carpetas; no se han escuchado ni identificado individualmente las obras.",
+    "Cada mezcla esta exclusivamente en entrenamiento, pero puede contener obras de validacion o prueba: solapamiento no descartado.",
+    "Validacion y prueba reutilizadas; las metricas NO estiman precision independiente. Falta una prueba nueva con cuatro generos.",
+    "Fragmentos distribuidos de 30 segundos pueden incluir transiciones; no representan segmentacion por canciones."
+  ],
+  "test_missing_genres": [
+    "rock"
+  ],
+  "model_id": "20261102T171507612415Z",
+  "feature_version": "numpy_timbre_rhythm_six_windows_v2",
+  "versions": {
+    "scikit-learn": "1.9.1",
+    "scipy": "1.18.1",
+    "numpy": "2.5.4",
+    "soundfile": "0.14.0"
+  },
+  "evaluation_status": "exploratoria_no_independiente",
+  "requires_new_holdout": true
+}

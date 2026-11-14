@@ -1,0 +1,4 @@
+{
+  "backend": "mysql",
+  "credentials_file": "mysql_local/app.json"
+}
